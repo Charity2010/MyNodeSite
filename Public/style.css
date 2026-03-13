@@ -1,0 +1,8 @@
+a{
+    color:coral;
+    font-size:large;
+    font-family: 'Times New Roman', Times, serif;
+}
+a:hover{
+    color:aqua;
+}
