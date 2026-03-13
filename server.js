@@ -36,3 +36,7 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
   res.sendFile(__dirname + '/public/contact.html')
 })
+
+app.get('/style',(req, res)=> {
+  res.sendFile(_dirname + '/public/style.css')
+})
