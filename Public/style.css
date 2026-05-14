@@ -229,15 +229,18 @@ a{
     font-family: Courier, monospace;
 }
 p.nav-links{
-    color: #0c861d;
+    color: #0b7719;
     font-size:larger;
     font-family: Courier, monospace;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 h2.subheading{
     font-family: var(--head-font);
     font-size: var(--subheading-size);
+}h3>a{
+    font-weight: bold;
+    color: #0fa122;
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
