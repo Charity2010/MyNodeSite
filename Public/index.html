@@ -1,33 +1,173 @@
 <!DOCTYPE html>
 <html>
+    <!-- I chose chango and coiur new as my nain font because it was cute abd basic. They conpletment eachother because they are bith elegance fonts. I didn't use nay fonts weights, adding image effets -->
+<!-- I don't know what optimize means, i use jpg because they came with it, they have image :hover -->
 
-<head>
-<title>Home</title>
-<link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
-<body>
-    <nav>
+            <!-- Header Font link -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
-        <a href="/">Home</a> |
-        <a href="/about">About</a> |
-        <a href="/contact">Contact</a>
+            <style>
+                body{
+                    background-color: #8FBC8F;
+                }
+            </style>
+        </head>
 
-    </nav>
-    <hr>
+    <body>
+        <div class = "navbar">
+            <a href = "/"><img src = "images/Logo.png" class = "navCon" alt = "My Opinion is Fact" width = "200" height = "100"></a>
+        </div>
+        <button type="button" class="collapsible">Menu</button>
+        <div class="content">
+            <p class = "nav-links"><a href="/">Home</a></p>
+            <p class = "nav-links"><a href="/about">About</a></p>
+            <p class = "nav-links"><a href="/contact">Contact</a></p>
+            <p class = "nav-links"><a href = "/projects">Projects</a></p>   
+        </div>
 
-<h1>Welcome to My Website</h1>
 
-<p>This is my homepage.</p>
 
-<footer>
-    <p>
-        2026 My Website. All rights reserved.
+        <h1 class = "head">Welcome</h1>
+
+
+        <p>
+            This site isn’t just another movie and show review page. It highlights today’s most popular, trending titles and gives you a quick, easy rundown—perfect for when you want to stay in the loop without watching everything. If a show is blowing up on a platform you don’t have, you’ll still find everything you need to know right here.
+        </p>
         <br>
-        [Contact Us](mailto:contact@example.com) | [Privacy Policy](link/to/privacy)
-    </p>
-</footer>
+        <h2 class="subheading">
+            Trendy Shows
+        </h2>
 
-</body>
+       
+        <!-- the group of buttons -->
+        <div class="big-buttons">
+            <button type = "button" class="big-button" id = "jjk" alt = "jujutsu kaisen"></button>
+            <button type = "button" class="big-button" id = "euphoria" alt = "euphoria"></button>
+            <button type = "button" class="big-button" id = "invincible" alt = "invincible"></button>
+        </div>
+        <br>
+
+        <h2 class="subheading">
+            Popular Shows on Netflix
+        </h2>
+
+        <div class="big-buttons">
+            <button type = "button" class="big-button" id = "bridgerton" alt="bridgerton"></button>
+            <button type = "button" class="big-button" id = "avatar" alt = "avatar"></button>
+            <button type = "button" class="big-button" id = "newGroove" alt = "the emperor's new groove"></button>
+        </div>
+        <br>
+
+        <h2 class="subheading">
+            Polular Movies on Netflix
+        </h2>
+
+        <div class="big-buttons">
+            <button type = "button" class="big-button" id = "legoM" alt = "the lego movie"></button>
+            <button type = "button" class="big-button" id = "missionImpossible" alt = "mission impossible"></button>
+            <button type = "button" class="big-button" id = "rushour" alt = "rush hour"></button>
+        </div>
+        
+        <div class="big-buttons">
+            <button type = "button" class="big-button" id = "FastFurious" alt = "fast and furious"></button>
+            <button type = "button" class="big-button" id = "oceanEleven" alt = "oceans eleven"></button>
+            <button type = "button" class="big-button" id = "legoBatman" alt = "the lego batman move"></button>
+        </div>
+        <br>
+        
+        <h2 class="subheading">
+            Honorable Mentions 
+        </h2>
+
+        <div class="big-buttons">
+            <button type = "button" class="big-button" id = "godfather" alt = "the godfather"></button>
+            <button type = "button" class="big-button" id = "matrixs" alt = "the matrixs"></button>
+            <button type = "button" class="big-button" id = "shawshank" alt = "the shawshank redemption"></button>
+        </div>
+
+        <footer>
+            <p>
+                2026 My Website. All rights reserved.
+                <br>
+                [Contact Us](mailto:contact@example.com) | [Privacy Policy](link/to/privacy)
+            </p>
+        </footer>
+
+        <script>
+            // by doing this i don't need to use 'a' tags to add links to my buttons
+            document.getElementById("jjk").addEventListener("click", function () {
+                window.location.href = "https://www.imdb.com/title/tt12343534/";
+            });
+            document.getElementById("bridgerton").addEventListener("click", function () {
+                window.location.href = "https://www.imdb.com/title/tt8740790/";
+            });
+            document.getElementById("invincible").addEventListener("click", function () {
+                window.location.href = "https://www.imdb.com/title/tt6741278/";
+            });
+            document.getElementById("euphoria").addEventListener("click", function () {
+                window.location.href = "https://www.imdb.com/title/tt8772296/";
+            });
+            document.getElementById("avatar").addEventListener("click", function () {
+                window.location.href = "https://www.imdb.com/title/tt0499549/";
+            });
+            document.getElementById("newGroove").addEventListener("click", function () {
+                window.location.href = "https://www.imdb.com/title/tt0120917/";
+            });
+            document.getElementById("godfather").addEventListener("click", function () {
+                window.location.href = "https://www.imdb.com/title/tt0068646/?ref_=chttp_i_2";
+            });
+            document.getElementById("shawshank").addEventListener("click", function () {
+                window.location.href = "https://www.imdb.com/title/tt0111161/?ref_=chttp_i_1";
+            });
+            document.getElementById("rushour").addEventListener("click", function () {
+                window.location.href = "#";
+            });
+            document.getElementById("legoM").addEventListener("click", function () {
+                window.location.href = "#";
+            });
+            document.getElementById("oceanEleven").addEventListener("click", function () {
+                window.location.href = "#";
+            });
+            document.getElementById("missionImpossible").addEventListener("click", function () {
+                window.location.href = "#";
+            });
+            document.getElementById("FastFurious").addEventListener("click", function () {
+                window.location.href = "#";
+            });
+            document.getElementById("matrixs").addEventListener("click", function () {
+                window.location.href = "#";
+            });
+            document.getElementById("legoBatman").addEventListener("click", function () {
+                window.location.href = "#";
+            });
+
+    // -------------------------------------------------------------------------------------------collapsible menu java--------------------------------------------------------------------------
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }  
+        </script>
+
+    </body>
 
 </html>

@@ -1,32 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 
 <head>
-<title>Contact</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <!-- Header Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-    <nav>
+    <div class = "navbar">
+        <a href = "/"><img src = "images/Logo.png" class = "navCon" alt = "My Opinion is Fact" width = "200" height = "100"></a>
+    </div>
+    <button type="button" class="collapsible">Menu</button>
+    <div class="content">
+        <p class = "nav-links"><a href="/">Home</a></p>
+        <p class = "nav-links"><a href="/about">About</a></p>
+        <p class = "nav-links"><a href="/contact">Contact</a></p>
+        <p class = "nav-links"><a href = "/projects">Projects</a></p>   
+    </div>
 
-        <a href="/">Home</a> |
-        <a href="/about">About</a> |
-        <a href="/contact">Contact</a>
+    <main class="form-page">
 
-    </nav>
-    <hr>
+        <h1>Contact Us</h1>
 
-<h1>Contact</h1>
+        <p>Fill out the form below and we will get back to you within 24 hours.</p>
+        <!-- form goes here -->
+         <form id = "contactForm" action = "/send" method ="post" novalidate>       
+            <!-- Full Name -->
+            <div class = "form-group">
+                <label for = "fullName">Full Name <span class="required">*</span></label>
+                <input type="text"
 
-<p>This page explains how to contact me.</p>
+                    id="fullName"
 
-<footer>
-    <p>
-        2026 My Website. All rights reserved.
-        <br>
-        [Contact Us](mailto:contact@example.com) | [Privacy Policy](link/to/privacy)
-    </p>
-</footer>
+                    name="fullName"
 
+                    placeholder="Jane Smith"
+
+                    autocomplete="name"
+
+                    required>
+                <span class="error-msg" id="fullNameError"></span>
+            </div>
+            <!-- Email -->
+            <div class = "form-group">
+                <label for "email">Email Address<span class = "requires">*</span></label>
+                <input type="email"
+
+                    id="email"
+
+                    name="email"
+
+                    placeholder="jane@example.com"
+
+                    autocomplete="email"
+
+                    required>
+                <span class = "error-msg" id = "emailError"></span>
+            </div>
+            <!-- Phone -->
+
+            <div class="form-group">
+
+                <label for="phone">Phone Number</label>
+
+                <input type="tel"
+
+                    id="phone"
+
+                    name="phone"
+
+                    placeholder="(208) 555-0100"
+
+                    autocomplete="tel">
+
+                <span class="error-msg" id="phoneError"></span>
+
+            </div>
+            <!-- Reason for contact -->
+            <div class = "form-group">
+                <label for = "reason">Reason for Contact <span class = "reduired">*</span></label>
+                <select>
+                    <option value="">-- Please select --</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="support">Customer Support</option>
+                    <option value="sales">Sales Question</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+                <span class = "error-msg" id = "reasonError"></span>
+            </div>
+            <!-- Preferred contact method -->
+
+            <fieldset class="form-group">
+
+                <legend>Preferred Contact Method <span class="required">*</span></legend>
+
+                <div class="radio-group">
+
+                    <input type="radio" id="contactEmail" name="contactMethod" value="email"
+
+                    required>
+
+                    <label for="contactEmail">Email</label>
+
+                </div>
+
+                <div class="radio-group">
+
+                    <input type="radio" id="contactPhone" name="contactMethod" value="phone">
+
+                    <label for="contactPhone">Phone</label>
+
+                </div>
+
+                <div class="radio-group">
+
+                    <input type="radio" id="contactEither" name="contactMethod" value="either">
+
+                    <label for="contactEither">Either is fine</label>
+
+                </div>
+
+                <span class="error-msg" id="contactMethodError"></span>
+
+            </fieldset>
+            
+            <!-- Services of interest -->
+            
+            <fieldset class = "form-group">
+                
+                <legend>I am interested in (select all that apply)</legend>
+                
+                <div class = "checkbox-group">
+                    
+                    <input type="checkbox" id="svcConsulting" name="services"value="consulting">
+                    
+                    <label for="svcConsulting">Consulting</label>
+                
+                </div>
+                
+                <div class="checkbox-group">
+
+                    <input type="checkbox" id="svcDesign" name="services" value="design">
+
+                    <label for="svcDesign">Design Services</label>
+
+                </div>
+
+                <div class="checkbox-group">
+
+                    <input type="checkbox" id="svcTraining" name="services" value="training">
+
+                    <label for="svcTraining">Training</label>
+
+                </div>
+
+                <div class="checkbox-group">
+
+                    <input type="checkbox" id="svcSupport" name="services" value="support">
+
+                    <label for="svcSupport">Ongoing Support</label>
+
+                </div>
+
+            </fieldset>
+            <!-- preferred callback -->
+            <div class = "form-group">
+                <label for = "callbackDate">Preferred Callback Date</label>
+                <input type="date"
+
+                    id="callbackDate"
+
+                    name="callbackDate"
+
+                    min="2024-01-01">
+            </div>
+            <!-- Number of employees -->
+
+            <div class="form-group">
+
+                <label for="employees">Number of Employees</label>
+
+                <input type="number"
+
+                    id="employees"
+
+                    name="employees"
+
+                    min="1"
+
+                    max="10000"
+
+                    placeholder="e.g. 25">
+
+            </div>
+            <!-- Message -->
+
+            <div class="form-group">
+
+                <label for="message">Message <span class="required">*</span></label>
+
+                <textarea id="message"
+                    name="message"
+                    rows="5"
+                    paceholder="Tell us how we can help you..."
+                    maxlength="1000"
+                    required></textarea>
+
+                <small class="hint">Maximum 1000 characters</small>
+
+                <span class="error-msg" id="messageError"></span>
+
+            </div>`
+            <!-- Button for Submit and Reset -->
+            <div class = "form-buttons">
+                <button type = "submit">Send Message</button>
+                <button type = "reset"> Clear Form</button>
+            </div>
+         </form>                                                                            <!-- END OF FORM -->
+
+    </main>
+    
+
+    <footer>
+        <p>
+            2026 My Website. All rights reserved.
+            <br>
+            [Contact Us](mailto:contact@example.com) | [Privacy Policy](link/to/privacy)
+        </p>
+    </footer>
+    <!-- <script src="js/formValidation.js"></script> -->
+
+    <script>
+    // -------------------------------------------------------------------------------------------collapsible menu java--------------------------------------------------------------------------
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    } 
+    </script>
 </body>
 
 </html>

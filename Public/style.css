@@ -1,3 +1,336 @@
-body{
-    background-color: azure;
+:root{
+    --primary-color:#8FBC8F;
+    --secondary-color:#F0FFF0;
+    --main-font:'Courier New', Courier, monospace;
+    --head-font:'Chango', sans-serif;
+    --head-size:xx-large;
+    --subheading-size:x-large;
+    --spacing:16px;
 }
+
+
+body{
+    background-color: var(--secondary-color);
+}
+
+img:hover{
+     filter: invert();
+}
+
+/* -------------------------------------------------------------------------------------------------------------------Navigation-------------------------------------------------------------------- */
+
+@media (max-width: 48rem) {
+    .nav-links {
+        display:none;
+        flex-direction: column;
+    }
+    .big-buttons {
+    flex-direction: column;
+    align-items: stretch; /* makes them full width */
+    }
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.navCon{
+    filter: 
+    opacity() 
+    drop-shadow(0 0 15px white);
+}
+.navbar {
+  background-image: url('https://images.pexels.com/photos/33453923/pexels-photo-33453923.jpeg');
+  background-size: cover;      /* makes the image fill the nav */
+  background-position: center; /* keeps the focal point centered */
+  background-repeat: no-repeat;
+  height: 95px;                /* adjust based on your design */
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+
+/* function toggleMenu() {
+    document.querySelector ('.nav-links').classList.toggle('active');
+} */
+
+
+.grid {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*---------------------------------------------------------------------------------------------------------- === Form Layout  and conatact.html===-------------------------------------------- */
+
+.form-page {
+    max-width: 680px;
+    margin:2rem auto;
+    padding: 0 1rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.required {color: #c0392b;}
+
+input[type = "text"]
+input[type = "email"]
+input[type = "tel"]
+input[type = "number"]
+input[type = "date"]
+
+select,
+textarea{
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #2e4a7a;
+    box-shadow: 0 0 0 2px rgba(46,74,122,0.15);
+}
+
+fieldset { border: none; padding: 0; margin: 0 0 1.25rem; }
+legend { font-weight: 600; margin-bottom: 0.4rem; }
+
+.radio-group, .checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+/* === Error & Hint Messages === */
+.error-msg {
+    color: #c0392b;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.hint { color: #666; font-size: 0.85rem; margin-top: 0.2rem; }
+
+/* === Buttons === */
+.form-buttons { display: flex; gap: 1rem; margin-top: 1.5rem; }
+button[type="submit"] {
+    background: #2e4a7a;
+    color: white;
+    border: none;
+    padding: 0.65rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover { background: #1a3560;}
+
+button[type="reset"] {
+    background: transparent;
+    border: 1px solid #aaa;
+    padding: 0.65rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* === Success Message === */
+.success-msg {
+    background: #e8f8ee;
+    border: 2px solid #1a6b3c;
+    border-radius: 6px;
+    padding: 2rem;
+    text-align: center;
+}
+/* -----------------------------------------------------------------------------------End of form aka contact.html------------------------------------------------------------------------------------------------------ */
+
+
+/* ----------------------------------------------------------------------------------------------Text Styles -----------------------------------------------------------------------------------------------*/
+@keyframes colorFun {
+    from{
+        color: black;
+    }
+    to{
+        color: #3CB371;
+    }
+}
+
+.head{
+    font-family: var(--head-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: var(--head-size);
+    animation: colorFun 5s ease-in;
+}
+
+p{
+    font-family: var(--main-font);
+}
+
+a:hover{
+    color:#556B2F;
+}
+
+a{
+    color: #0c861d;
+    font-size:large;
+    font-family: Courier, monospace;
+}
+p.nav-links{
+    color: #0c861d;
+    font-size:larger;
+    font-family: Courier, monospace;
+    font-weight: bold;
+}
+
+h2.subheading{
+    font-family: var(--head-font);
+    font-size: var(--subheading-size);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------Hero buttons-------------------------------------------------------------------------------------- */
+/* this makes them hero size blocks */
+.big-buttons {
+  display: flex; /*container*/
+  gap: 20px;
+  justify-content: center;
+}
+
+.big-button {
+    width: 100%;
+    font-size: 2rem;
+    padding: 120px 60px ;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-size: cover;      /* makes the image fill the nav */
+    background-position: center; /* keeps the focal point centered */
+    background-repeat: no-repeat;
+    height: 100px;                /* adjust based on your design */
+    display: flex;
+    align-items: center;
+    
+}
+
+.big-button:hover{
+    transform: scale(1.2);
+    filter: contrast(120%) brightness(110%);
+}
+
+#jjk{
+    background-image: url('https://static0.cbrimages.com/wordpress/wp-content/uploads/2025/05/gojo-s-past-in-jujutsu-kaisen-2.jpeg?q=49&fit=crop&w=825&dpr=2');
+    
+}
+
+#bridgerton{
+    background-image: url('https://halleonard-coverimages.s3.amazonaws.com/wl/00811412-wl.jpg');
+}
+    
+
+#invincible{
+    background-image: url('https://comicvine.gamespot.com/a/uploads/original/11176/111765274/9668215-1536884069-invin.jpg');
+}
+
+#euphoria{
+    background-image: url('https://hips.hearstapps.com/hmg-prod/images/rue-euphoria-2-1564691160.png?crop=0.910xw:1.00xh;0.0527xw,0&resize=640:*');
+}
+#avatar{
+    background-image: url('https://www.dexerto.com/cdn-image/wp-content/uploads/2022/12/08/pandora-avatar-2.jpg?width=1200&quality=60&format=auto');
+}
+#newGroove{
+    background-image: url('https://cinemacats.com/wp-content/uploads/2014/08/emperorsnewgroovefeature.jpg');
+}
+#godfather{
+    background-image: url('https://images.bauerhosting.com/legacy/media/6217/9535/9649/1207/f543/24bb/vote-hero.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80');
+}
+#shawshank{
+    background-image:url('https://m.media-amazon.com/images/M/MV5BNjQ2NDA3MDcxMF5BMl5BanBnXkFtZTgwMjE5NTU0NzE@._V1_.jpg');
+}
+
+#rushour{
+    background-image: url('https://occ-0-8407-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABbpiKM8AH0HPebwVEwY-5__aoj5q0jg1KUwkLa4kS9VNg8aRkCnzohS9ScYJMqAsdUKCjqCtLGJGF93XdqdhE7JdgDkohpVXAJOc.jpg?r=b34');
+}
+
+#legoM{
+    background-image: url('https://images.squarespace-cdn.com/content/v1/5e387eca8235c42f2e4dbe6c/1613784355750-SEZ59RX18G5Y5HHD74CF/lego-imdb.jpg');
+}
+
+#oceanEleven{
+    background-image: url('https://www.rollingstone.com/wp-content/uploads/2018/06/oceans-eleven-movie-f4005da8-4e4b-4291-bcef-ff27294b2030.jpg');
+}
+
+#missionImpossible{
+    background-image: url('https://www.intofilm.org/intofilm-production/scaledcropped/970x546https%3A/s3-eu-west-1.amazonaws.com/images.cdn.filmclub.org/film__3300-mission-impossible--hi_res-305fd19a.jpg/film__3300-mission-impossible--hi_res-305fd19a.jpg');
+}
+
+#FastFurious{
+    background-image: url('https://m.media-amazon.com/images/S/pv-target-images/268afe470426c39da0ab42e0f20371a9b998a4a4dd98af9448cef5d3aa5ca0b9._SX1080_FMjpg_.jpg');
+}
+
+#matrixs{
+    background-image: url('https://static0.colliderimages.com/wordpress/wp-content/uploads/2023/05/the-matrix-code-keanu-reeves.jpeg?w=1200&h=675&fit=crop');
+}
+
+#legoBatman{
+    background-image: url('https://theithacan.org/wp-content/uploads/2017/02/lego-batman-1-1024x577.jpg');
+}
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PROjects</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <!-- Header Font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chango&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+    <div class = "navbar">
+        <a href = "/"><img src = "images/Logo.png" class = "navCon" alt = "My Opinion is Fact" width = "200" height = "100"></a>
+    </div>
+    <button type="button" class="collapsible">Menu</button>
+    <div class="content">
+        <p class = "nav-links"><a href="/">Home</a></p>
+        <p class = "nav-links"><a href="/about">About</a></p>
+        <p class = "nav-links"><a href="/contact">Contact</a></p>
+        <p class = "nav-links"><a href = "/projects">Projects</a></p>   
+    </div>
+
+
+    <script>
+ // -------------------------------------------------------------------------------------------collapsible menu java--------------------------------------------------------------------------
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>
